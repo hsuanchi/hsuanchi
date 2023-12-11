@@ -1,0 +1,81 @@
+{
+  // Workbench
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.sideBar.location": "left",
+  "workbench.panel.defaultLocation": "right",
+  "editor.tabCompletion": "on", // 啟用tab鍵自動完成
+  "editor.formatOnSave": true, // 儲存檔案時自動 format
+  "editor.minimap.enabled": false, // 關閉右邊小地圖
+  "editor.renderWhitespace": "boundary", // 顯示縮排線
+  "editor.wordWrap": "off", // 文字換行
+  "audioCues.lineHasError": "off", // 程式行出現錯誤時，播放音效
+  "audioCues.lineHasInlineSuggestion": "off", // 程式行有內嵌建議時，播放音效。
+  "audioCues.noInlayHints": "off", // 讀取含沒有內嵌提示之內嵌提示的行時，播放音效。
+  "window.zoomLevel": 1, // 視窗字體縮放
+
+  // File
+  "files.autoSave": "onWindowChange", // 當切換視窗時自動儲存
+  "files.insertFinalNewline": true, // 儲存檔案時在結尾插入一個新行
+  "files.trimFinalNewlines": true, // 儲存檔案時刪除尾端多餘的空白行
+  "files.defaultLanguage": "markdown", // 預設檔案是 markdown
+  "files.exclude": {
+    "**/.git": false
+  },
+
+  // Terminal
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "python.venvPath": "~/Library/Caches/pypoetry/virtualenvs",
+
+  // Plugin - Power Mode
+  "powermode.enabled": true,
+  "powermode.shake.intensity": 0.5,
+
+  // Plugin - Git Graph
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+
+  // Plugin - Git Copilot
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+
+  // Plugin - Jupyter
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+
+  // Plugin - Pylance
+  "python.analysis.typeCheckingMode": "basic",
+
+  // Plugin - Black & isort
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "isort.args": ["--profile", "black"],
+  // Plugin - Flake8
+  "flake8.args": [
+    "max-line-length=88",
+    "--ignore=E402,E266,E203,E501,W503,,F841,F401,E632"
+  ],
+  // Plugin - Prettier
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // apply to all profiles
+  "workbench.settings.applyToAllProfiles": ["editor.tabSize"],
+}
