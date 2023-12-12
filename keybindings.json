@@ -4,7 +4,7 @@
         "key": "alt+[Comma]",
         "command": "workbench.action.toggleActivityBarVisibility"
     },
-    // 開啟右側檔案總管
+    // 開啟左側檔案總管
     {
         "key": "alt+.",
         "command": "workbench.action.toggleSidebarVisibility"
@@ -79,5 +79,15 @@
         "command": "-github.copilot.generate",
         "when": "editorTextFocus && github.copilot.activated && !inInteractiveInput && !interactiveEditorFocused"
     },
-
+    // Github Copilot inline chat
+    {
+        "key": "alt+'",
+        "command": "inlineChat.start",
+        "when": "inlineChatHasProvider && !editorReadonly"
+    },
+    {
+        "key": "cmd+i",
+        "command": "-inlineChat.start",
+        "when": "inlineChatHasProvider && !editorReadonly"
+    }
 ]
